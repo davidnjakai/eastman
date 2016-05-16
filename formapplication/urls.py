@@ -1,3 +1,7 @@
 from django.conf.urls import patterns, include, url
+from . import views
 
-urlpatterns = patterns(' ', url(r'^hello/', 'myapp.views.hello', name = 'hello'),)
+urlpatterns = [
+    url(r'^$', 'formapplication.views.index', name = 'index'),
+    url(r'^hello/', 'formapplication.views.hello', name = 'hello')
+]

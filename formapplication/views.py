@@ -2,6 +2,7 @@ from django.shortcuts import render
 
 # Create your views here.
 from django.http import HttpResponse
+def index(request):
+   return HttpResponse("Hello, this is  the index page")
 def hello(request):
-   text = """<h1>welcome to my app !</h1>"""
-   return HttpResponse(text)
+   return HttpResponse("Hello, this is the hello page")
