@@ -22,3 +22,5 @@ class Patient(models.Model):
 	balancedue = models.IntegerField(default=0)
 	occupation = models.CharField(max_length=45)
 	employer_school = models.CharField(max_length=45)
+	def __str__(self):
+		return self.lastname
