@@ -4,7 +4,6 @@ from django.db import models
 
 # Create your models here.
 class Patient(models.Model):
-	patid = models.IntegerField(default=0)
 	lastname = models.CharField(max_length=45)
 	firstname = models.CharField(max_length=45)
 	middlename = models.CharField(max_length=45)
