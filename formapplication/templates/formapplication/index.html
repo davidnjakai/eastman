@@ -1,7 +1,7 @@
 {% if the_patients_list %}
      <ul>
      {% for patient in the_patients_list %}
-         <li><a href="/formapplication/{{ patient.id }}/">{{ patient.firstname }}</a></li>
+         <li><a href="{% url 'formapplication:detail' patient.id %}">{{ patient.firstname }}</a></li>
      {% endfor %}
      </ul>
  {% else %}

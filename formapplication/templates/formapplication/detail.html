@@ -1,0 +1,6 @@
+<h1>{{ patient.middlename }}</h1>
+<ul>
+{% for something in Patient.objects %}
+    <li>{{ something.email }}</li>
+{% endfor %}
+</ul>

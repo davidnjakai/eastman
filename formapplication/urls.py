@@ -1,6 +1,6 @@
 from django.conf.urls import patterns, include, url
 from . import views
-
+app_name = 'formapplication'
 urlpatterns = [
     url(r'^$', views.index, name = 'index'),
     url(r'^hello/', views.hello, name = 'hello'),
