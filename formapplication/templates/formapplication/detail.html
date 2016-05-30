@@ -1,6 +1,11 @@
 <h1>{{ patient.middlename }}</h1>
-<ul>
-{% for something in Patient.objects %}
-    <li>{{ something.email }}</li>
+{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+
+<form action="{% url 'formapplication:surname' patient.id %}" method="post">
+{% csrf_token %}
+{% for patient in allofthem %}
+    <input type="radio" name="patient" id="patient{{ forloop.counter }}" value="{{ patient.id }}" />
+    <label for="patient{{ forloop.counter }}">{{ patient.email }}</label><br />
 {% endfor %}
-</ul>
+<input type="submit" value="Vote" />
+</form>

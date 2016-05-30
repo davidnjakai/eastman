@@ -13,7 +13,7 @@ def hello(request):
    return HttpResponse("Hello, this is the hello page")
 def detail(request, patient_id):
    patient = get_object_or_404(Patient, pk=patient_id)
-   return render(request, 'formapplication/detail.html', {'patient': patient})
+   return render(request, 'formapplication/detail.html', {'patient': patient, 'allofthem': Patient.objects.all()})
 def surname(request, patient_id):
    response="The patient your examining is %s"
    return HttpResponse(response%patient_id)
